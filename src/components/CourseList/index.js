@@ -1,42 +1,42 @@
 import React, { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { ADD_CORSE } from "../../store/constants"
+import { addCourseToListAction } from "../../store/actions"
 
 const CourseList = () => {
-  //   Set the State
+  //   Set the Course
   const [courseToAdd, setCourseToAdd] = useState("")
-
-  const handleCouseToAdd = (event) => {
-    setCourseToAdd(event.target.value)
-  }
 
   //Get the reducer by hooks method
   const courses = useSelector((state) => {
-    return state.data
+    return state.courses.data
   })
+
   //   Dispatch the Redux actions
   const dispatch = useDispatch()
-
-  const addCourseToList = () => {
+  const handleClick = () => {
     if (courseToAdd.length) {
-      dispatch({ type: ADD_CORSE, title: courseToAdd })
+      dispatch(addCourseToListAction(courseToAdd))
     }
   }
 
   return (
     <div>
-      <ul>
-        {/*Loop through the courses constant creating an list with all couses*/}
-        {courses.map((couse) => (
-          <li key={couse}>{couse}</li>
-        ))}
-      </ul>
+      <label htmlFor="coursesList">
+        <h1>Courses List</h1>
+        <ul>
+          {/*Loop through the courses constant creating an list with all couses*/}
+          {courses.map((couse) => (
+            <li key={couse}>{couse}</li>
+          ))}
+        </ul>
+      </label>
       <input
+        id="coursesList"
         type="text"
         placeholder="add a new course"
-        onChange={handleCouseToAdd}
+        onChange={(event) => setCourseToAdd(event.target.value)}
       />
-      <button type="submit" onClick={addCourseToList}>
+      <button type="submit" onClick={() => handleClick()}>
         Add Course
       </button>
     </div>
