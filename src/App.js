@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import CourseList from "./components/CourseList"
 import UserOptions from "./components/UserOptions"
-import DataList from "./components/DataList"
+import DataList from "./components/Suites"
 import { fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
 
