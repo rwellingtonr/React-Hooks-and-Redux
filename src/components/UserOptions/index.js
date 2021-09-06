@@ -1,14 +1,8 @@
-import React, { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { fetchUsersAction } from "../../store/actions"
+import React from "react"
+import { useSelector } from "react-redux"
 
 const UserOptions = () => {
-  const dispatch = useDispatch()
   const users = useSelector((state) => state.fetchUsers.users)
-
-  useEffect(() => {
-    fetchUsersAction(dispatch)
-  }, [dispatch])
 
   return users.isPending ? (
     <h1>Loading</h1>
