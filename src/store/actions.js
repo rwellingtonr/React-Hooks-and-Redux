@@ -1,13 +1,13 @@
-import { ADD_CORSE, FETCH_INITIAL, FETCH_OK, FETCH_ERROR } from "./constants"
+import * as data from "./constants"
 
 export const addCourseToListAction = (courseToAdd) => {
-  return { type: ADD_CORSE, title: courseToAdd }
+  return { type: data.ADD_CORSE, title: courseToAdd }
 }
 
 export const fetchUsersAction = (dispatch) => {
-  dispatch({ type: FETCH_INITIAL })
-  fetch("https://jsonplaceholder.typicode.com/users")
+  dispatch({ type: data.FETCH_INITIAL })
+  fetch(data.USER_DATA_URL)
     .then((response) => response.json())
-    .then((user) => dispatch({ type: FETCH_OK, payload: user }))
-    .catch((e) => dispatch({ type: FETCH_ERROR, payload: e }))
+    .then((user) => dispatch({ type: data.FETCH_OK, payload: user }))
+    .catch((e) => dispatch({ type: data.FETCH_ERROR, payload: e }))
 }

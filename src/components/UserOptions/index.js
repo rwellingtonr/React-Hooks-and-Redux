@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector } from "react-redux"
 
 const UserOptions = () => {
-  const users = useSelector((state) => state.fetchUsers.users)
+  const users = useSelector((state) => state.fetchData.users)
 
   return users.isPending ? (
     <h1>Loading</h1>

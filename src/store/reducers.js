@@ -17,7 +17,7 @@ export const courses = (state = INITIAL_STATE, action) => {
   }
 }
 
-export const fetchUsers = (state = INITIAL_STATE_USERS, action) => {
+export const fetchData = (state = INITIAL_STATE_USERS, action) => {
   switch (action.type) {
     case FETCH_INITIAL:
       return { ...state, isPending: true }
