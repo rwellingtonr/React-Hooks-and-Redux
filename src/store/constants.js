@@ -7,15 +7,9 @@ export const INITIAL_STATE_USERS = {
   users: [],
   error: "",
 }
-export const INITIAL_STATE_TODO = {
-  isPending: true,
-  title: [],
-  error: "",
-}
 
 //Paths
 export const USER_DATA_URL = "https://jsonplaceholder.typicode.com/users"
-export const TODO_DATA_URL = "http://jsonplaceholder.typicode.com/albums"
 
 //Fetching method
 export const FETCH_INITIAL = "FETCH_INITIAL"

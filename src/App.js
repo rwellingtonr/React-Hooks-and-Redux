@@ -4,7 +4,7 @@ import UserOptions from "./components/UserOptions"
 import Suites from "./components/Suites"
 import { fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
-// import Editable from "./components/ContentEditable"
+import Editable from "./components/ContentEditable"
 
 export default function App() {
   // Use the Dispatch Hook
@@ -19,7 +19,7 @@ export default function App() {
       <CourseList />
       <UserOptions />
       <Suites />
-      {/*<Editable />*/}
+      <Editable />
     </div>
   )
 }

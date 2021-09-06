@@ -23,17 +23,3 @@ export const fetchData = (state = constant.INITIAL_STATE_USERS, action) => {
       return state
   }
 }
-
-export const todoDataList = (state = constant.INITIAL_STATE_TODO, action) => {
-  switch (action.type) {
-    case constant.FETCH_INITIAL:
-      return { ...state, isPending: true }
-    case constant.FETCH_OK:
-      return { ...state, title: action.payload, isPending: false }
-    case constant.FETCH_ERROR:
-      return { ...state, error: action.payload, isPending: false }
-
-    default:
-      return state
-  }
-}

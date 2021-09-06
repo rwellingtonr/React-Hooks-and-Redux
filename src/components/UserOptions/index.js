@@ -8,6 +8,7 @@ const UserOptions = () => {
     <h1>Loading</h1>
   ) : (
     <div>
+      <h2>Toggled Names</h2>
       <details>
         <summary>Users list</summary>
         <section>
