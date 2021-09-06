@@ -2,7 +2,7 @@ import React from "react"
 import CourseList from "./components/CourseList"
 import UserOptions from "./components/UserOptions"
 
-function App() {
+export default function App() {
   return (
     <div>
       <CourseList />
@@ -10,5 +10,3 @@ function App() {
     </div>
   )
 }
-
-export default App
