@@ -1,16 +1,14 @@
 import React, { useEffect } from "react"
-import { useDispatch, useSelector } from "redux"
+import { useSelector, useDispatch } from "react-redux"
 import { fetchUsersAction } from "../../store/actions"
 
 const UserOptions = () => {
   const dispatch = useDispatch()
-  const users = useSelector((state) => state.fetchUsers)
+  const users = useSelector((state) => state.fetchUsers.users)
 
   useEffect(() => {
-    dispatch(fetchUsersAction(dispatch))
-    console.log(users)
-  }, [])
-  console.log(users)
+    fetchUsersAction(dispatch)
+  }, [dispatch])
 
   return users.isPending ? (
     <h1>Loading</h1>
@@ -18,7 +16,11 @@ const UserOptions = () => {
     <div>
       <details>
         <summary>Users list</summary>
-        <section></section>
+        <section>
+          {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </section>
       </details>
     </div>
   )
