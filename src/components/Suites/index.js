@@ -2,14 +2,13 @@ import React from "react"
 import { useSelector } from "react-redux"
 
 // Change the name to Suite
-export default function DataList() {
+const Suites = () => {
   const suites = useSelector((state) => state.fetchData.users)
-  console.log(suites)
   return (
     <section>
       <label htmlFor="suites">Choose one Suite</label>
-      <input list="a" type="text" name="suites" id="suites" />
-      <datalist id="a">
+      <input list="suitesList" type="text" name="suites" id="suites" />
+      <datalist id="suitesList">
         {suites.map((suite) => (
           <option key={suite.id} value={suite.address.suite}></option>
         ))}
@@ -17,3 +16,4 @@ export default function DataList() {
     </section>
   )
 }
+export default Suites

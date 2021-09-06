@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import CourseList from "./components/CourseList"
 import UserOptions from "./components/UserOptions"
-import DataList from "./components/Suites"
+import Suites from "./components/Suites"
 import { fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
+// import Editable from "./components/ContentEditable"
 
 export default function App() {
   // Use the Dispatch Hook
@@ -17,7 +18,8 @@ export default function App() {
     <div>
       <CourseList />
       <UserOptions />
-      <DataList />
+      <Suites />
+      {/*<Editable />*/}
     </div>
   )
 }
