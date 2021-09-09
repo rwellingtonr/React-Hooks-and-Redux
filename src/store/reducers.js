@@ -23,3 +23,17 @@ export const fetchData = (state = constant.INITIAL_STATE_USERS, action) => {
       return state
   }
 }
+
+export const otherData = (state = constant.INITIAL_STATE_DATA, action) => {
+  switch (action.type) {
+    case constant.status.pending:
+      return { ...state, isPending: true }
+    case constant.status.ok:
+      return { ...state, data: action.payload, isPending: false }
+    case constant.status.nok:
+      return { ...state, error: action.payload, isPending: false }
+
+    default:
+      return state
+  }
+}

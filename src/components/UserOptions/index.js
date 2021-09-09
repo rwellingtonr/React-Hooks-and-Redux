@@ -1,8 +1,8 @@
 import React from "react"
-import { useSelector } from "react-redux"
+import { shallowEqual, useSelector } from "react-redux"
 
 const UserOptions = () => {
-  const users = useSelector((state) => state.fetchData.users)
+  const users = useSelector((state) => state.fetchData.users, shallowEqual)
 
   return users.isPending ? (
     <h1>Loading</h1>

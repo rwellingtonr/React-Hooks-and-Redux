@@ -1,18 +1,23 @@
 import React from "react"
-import { useSelector } from "react-redux"
+
+import { shallowEqual, useSelector } from "react-redux"
 
 export default function Editable() {
+  const qty = 10
   // Phone list
-  const phoneList = useSelector((state) => state.fetchData.users)
-  console.log(phoneList)
+  const comments = useSelector(
+    (state) => state.otherData.data.slice(0, qty),
+    shallowEqual
+  )
+  console.log("comments", comments)
 
   return (
     <section>
       <h2>Phone List</h2>
       <ul contentEditable>
-        {phoneList.map((phone) => (
+        {/* {phoneList.map((phone) => (
           <li key={phone.id}>{phone.phone}</li>
-        ))}
+  ))}*/}
       </ul>
     </section>
   )
