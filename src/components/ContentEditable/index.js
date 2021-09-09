@@ -9,15 +9,14 @@ export default function Editable() {
     (state) => state.otherData.data.slice(0, qty),
     shallowEqual
   )
-  console.log("comments", comments)
 
   return (
     <section>
-      <h2>Phone List</h2>
+      <h2>Comment</h2>
       <ul contentEditable>
-        {/* {phoneList.map((phone) => (
-          <li key={phone.id}>{phone.phone}</li>
-  ))}*/}
+        {comments.map((comment) => (
+          <li key={comment.id}>{comment.title}</li>
+        ))}
       </ul>
     </section>
   )

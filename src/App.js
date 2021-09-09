@@ -16,10 +16,12 @@ export default function App() {
   }, [dispatch])
   return (
     <div>
-      <CourseList />
-      <UserOptions />
-      <Suites />
-      <Editable />
+      <div>
+        <CourseList />
+        <UserOptions />
+        <Suites />
+        <Editable />
+      </div>
     </div>
   )
 }
