@@ -3,6 +3,7 @@ import CourseList from "./components/CourseList"
 import UserOptions from "./components/UserOptions"
 import Suites from "./components/Suites"
 import Editable from "./components/ContentEditable"
+import Cite from "./components/Cite"
 import { fetchDataAction, fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
 
@@ -14,6 +15,7 @@ export default function App() {
     fetchUsersAction(dispatch)
     fetchDataAction(dispatch)
   }, [dispatch])
+
   return (
     <div>
       <div>
@@ -21,6 +23,7 @@ export default function App() {
         <UserOptions />
         <Suites />
         <Editable />
+        <Cite />
       </div>
     </div>
   )
