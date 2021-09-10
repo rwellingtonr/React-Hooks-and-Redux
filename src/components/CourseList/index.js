@@ -36,7 +36,11 @@ const CourseList = () => {
         placeholder="add a new course"
         onChange={(event) => setCourseToAdd(event.target.value)}
       />
-      <button type="submit" onClick={() => handleClick()}>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        onClick={() => handleClick()}
+      >
         Add Course
       </button>
     </div>
