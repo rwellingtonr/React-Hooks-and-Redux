@@ -6,6 +6,7 @@ import Editable from "./components/ContentEditable"
 import Cite from "./components/Cite"
 import { fetchDataAction, fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
+import Optgroup from "./components/Optgroup"
 
 export default function App() {
   // Use the Dispatch Hook
@@ -24,6 +25,9 @@ export default function App() {
         <Suites />
         <Editable />
         <Cite />
+        <div style={{ height: " 100px" }}>
+          <Optgroup />
+        </div>
       </div>
     </div>
   )

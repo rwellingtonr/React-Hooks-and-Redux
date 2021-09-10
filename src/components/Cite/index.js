@@ -18,6 +18,7 @@ const Cite = () => {
         suspended in a sunbeam.
       </blockquote>
       <cite>Carl Sagan, Pale Blue Dot, 1994</cite>
+      <br />
     </div>
   )
 }
