@@ -11,7 +11,7 @@ export default function Editable() {
   )
 
   return (
-    <section>
+    <section className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <h2>Comment</h2>
       <ul contentEditable>
         {comments.map((comment) => (

@@ -2,7 +2,7 @@ import React from "react"
 
 const Cite = () => {
   return (
-    <div>
+    <div className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <h2>Pale Blue Dot</h2>
       <blockquote>
         Look again at that dot. That's here. That's home. That's us. On it

@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <div className="bg-light">
-      <div className="p-3 mb-2 bg text-black border rounded-3">
+      <div className="p-3 mb-2 bg text-black border border-1 border-dark rounded-3">
         <CourseList />
         <UserOptions />
         <Suites />

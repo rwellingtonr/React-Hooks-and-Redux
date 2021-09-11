@@ -2,7 +2,7 @@ import React from "react"
 
 const Optgroup = () => {
   return (
-    <section>
+    <section className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <label htmlFor="optgroup">
         <h2>Training Class</h2>
       </label>
