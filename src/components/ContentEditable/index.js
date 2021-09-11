@@ -13,8 +13,8 @@ export default function Editable() {
   return (
     <div className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <section>
-        <h2>Comment</h2>
-        <ul contentEditable>
+        <h2>Comments</h2>
+        <ul contentEditable className="text-capitalize">
           {comments.map((comment) => (
             <li key={comment.id}>{comment.title}</li>
           ))}
