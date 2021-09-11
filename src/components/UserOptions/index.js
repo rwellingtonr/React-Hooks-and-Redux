@@ -12,8 +12,8 @@ const UserOptions = () => {
     <div className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <h2>Toggled Names</h2>
       <details>
-        <summary>Users list</summary>
-        <section>
+        <summary className="fs-5">User List</summary>
+        <section className="ps-3">
           {users.map((user) => (
             <li key={user.id}>{user.name}</li>
           ))}
