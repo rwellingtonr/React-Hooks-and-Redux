@@ -20,7 +20,7 @@ const CourseList = () => {
   }
 
   return (
-    <div>
+    <div className="bg-light m-3 p-2 border border-dark rounded-3">
       <label htmlFor="coursesList">
         <h1>Courses List</h1>
         <ul>

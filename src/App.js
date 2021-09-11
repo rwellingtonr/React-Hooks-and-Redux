@@ -7,6 +7,7 @@ import Cite from "./components/Cite"
 import { fetchDataAction, fetchUsersAction } from "./store/actions"
 import { useDispatch } from "react-redux"
 import Optgroup from "./components/Optgroup"
+import "./app.css"
 
 export default function App() {
   // Use the Dispatch Hook
@@ -18,8 +19,8 @@ export default function App() {
   }, [dispatch])
 
   return (
-    <div>
-      <div>
+    <div className="bg-light">
+      <div className="p-3 mb-2 bg text-black border rounded-3">
         <CourseList />
         <UserOptions />
         <Suites />
