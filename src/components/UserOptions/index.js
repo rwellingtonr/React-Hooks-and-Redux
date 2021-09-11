@@ -9,7 +9,7 @@ const UserOptions = () => {
       <h1>Loading</h1>
     </div>
   ) : (
-    <div className="bg-light m-3 p-2 border border-dark rounded-3">
+    <div className="bg-light m-3 p-2 border border-2 border-dark rounded-3">
       <h2>Toggled Names</h2>
       <details>
         <summary>Users list</summary>
