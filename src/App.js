@@ -26,9 +26,7 @@ export default function App() {
         <Suites />
         <Editable />
         <Cite />
-        <div style={{ height: " 100px" }}>
-          <Optgroup />
-        </div>
+        <Optgroup />
       </div>
     </div>
   )
